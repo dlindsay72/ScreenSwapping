@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MusicListVC.swift
 //  ScreenSwapping2016
 //
 //  Created by Dan Lindsay on 2016-08-01.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class MusicListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.backgroundColor = UIColor.blue()
         
     }
 
-    
-
+   
 
 }
-
