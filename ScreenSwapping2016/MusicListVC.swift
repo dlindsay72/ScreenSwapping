@@ -17,6 +17,24 @@ class MusicListVC: UIViewController {
         
     }
 
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
+    }
    
+    @IBAction func loadThirdScreenPressed(_ sender: AnyObject) {
+        let songTitle = "Owner of a Lonely Heart"
+        performSegue(withIdentifier: "SongVC", sender: songTitle)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destination = segue.destinationViewController as? PlaySongVC {
+            
+            if let song = sender as? String {
+                destination.selectedSong = song
+            }
+            
+            
+        }
+    }
 
 }
